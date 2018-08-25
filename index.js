@@ -8,7 +8,7 @@ function nowServing(line) {
 }
 
 function currentLine(line) {
-  var msg = "The line is currently: "
+  var msg = `The line is currently${line.length? ': ' : ' empty.'}`
   for (var i = 0; i < line.length; i++) {
     msg += `${i + 1}. ${line[i]}${i + 1 === line.length? '' : ', '}`
   }
